@@ -26,10 +26,10 @@
 
             // define gameover
 
-            //if(head.x < 0 || head.x >= 400 || head.y < 0 || head.y >= 400 || snake.some(p => p.x === head.x && p.y === head.y)){
-             //   alert("GameOver");
-             //   return location.reload();
-            //}
+            if(head.x < 0 || head.x >= 400 || head.y < 0 || head.y >= 400 || snake.some(p => p.x === head.x && p.y === head.y)){
+                alert("GameOver");
+                return location.reload();
+            }
             snake.unshift(head);
 
             if(head.x === food.x && head.y === food.y){
@@ -44,7 +44,7 @@
             }else{
             snake.pop();
             }
-            setTimeout(gameLoop, 100);
+            setTimeout(gameLoop, 50);
 
             //Draw Everything
             //clear Rectangle
