@@ -26,7 +26,7 @@
 
             // define gameover
 
-            if(head.x < 0 || head.x >= 400 || head.y < 0 || head.y >= 400 || snake.some(p => p.x ===head.x && p.y === head.y)){
+            if(head.x < 0 || head.x >= 400 || head.y < 0 || head.y >= 400 || snake.some(p => p.x === head.x && p.y === head.y)){
                 alert("GameOver");
                 return location.reload();
             }
